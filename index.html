@@ -218,14 +218,76 @@
 }
 
 
+.experience-title {
+  margin-top: 42px;
+}
 
+.career-summary {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.promotion-list {
+  padding-left: 16px;
+  border-left: 2px solid #d5dde5;
+}
+
+.promotion-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 14px;
+  padding: 8px 0 14px;
+}
+
+.promotion-item:last-child {
+  padding-bottom: 4px;
+}
+
+.promotion-item::before {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 13px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2c3e50;
+}
+
+.promotion-date {
+  color: #667788;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.promotion-item strong {
+  color: #333;
+  font-size: 14px;
+}
       
       /* ---------- MOBILE: stack cards vertically ---------- */
-      @media (max-width: 640px) {
-        .cards {
-          grid-template-columns: 1fr;
-        }
-      }
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-text h3 {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .timeline li {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .promotion-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
     </style>
   </head>
 
@@ -308,30 +370,36 @@
 </h2>
 
 <ul class="timeline">
-  <li>
-    <span class="timeline-date">2024 - Present</span>
+  <!-- OCBC BANK -->
+  <li class="company-career">
+    <span class="timeline-date">2020 - 2026</span>
+
     <div>
-      <h3>Manager, Group Data Office</h3>
-      <p>OCBC Bank</p>
+      <h3>OCBC Bank</h3>
+      <p class="career-summary">
+        Progressive career growth within the Group Data Office
+      </p>
+
+      <div class="promotion-list">
+        <div class="promotion-item">
+          <span class="promotion-date">Apr 2024 - 2026</span>
+          <strong>Manager, Group Data Office</strong>
+        </div>
+
+        <div class="promotion-item">
+          <span class="promotion-date">Apr 2022 - Mar 2024</span>
+          <strong>Assistant Manager, Group Data Office</strong>
+        </div>
+
+        <div class="promotion-item">
+          <span class="promotion-date">Nov 2020 - Mar 2022</span>
+          <strong>Business Analyst, Group Data Office</strong>
+        </div>
+      </div>
     </div>
   </li>
 
-  <li>
-    <span class="timeline-date">2022 - 2024</span>
-    <div>
-      <h3>Assistant Manager, Group Data Office</h3>
-      <p>OCBC Bank</p>
-    </div>
-  </li>
-
-  <li>
-    <span class="timeline-date">2020 - 2022</span>
-    <div>
-      <h3>Business Analyst, Group Data Office</h3>
-      <p>OCBC Bank</p>
-    </div>
-  </li>
-
+  <!-- LENOVO -->
   <li>
     <span class="timeline-date">2020</span>
     <div>
@@ -340,6 +408,7 @@
     </div>
   </li>
 
+  <!-- AGRICULTURAL BANK OF CHINA -->
   <li>
     <span class="timeline-date">2018</span>
     <div>
@@ -348,6 +417,7 @@
     </div>
   </li>
 
+  <!-- MANULIFE -->
   <li>
     <span class="timeline-date">2018</span>
     <div>
@@ -356,8 +426,6 @@
     </div>
   </li>
 </ul>
-
-      
 
       <!-- ---------- TAB 2: PROJECTS ---------- -->
       <div id="projects" class="tab-content">
