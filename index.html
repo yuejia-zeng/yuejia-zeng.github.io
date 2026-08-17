@@ -25,9 +25,10 @@
       }
 
       .container {
-        max-width: 900px;
+        width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 40px 20px;
+        padding: 40px 24px;
       }
 
       /* ---------- HEADER (photo + name + subheading) ---------- */
@@ -96,9 +97,9 @@
 
       /* ---------- PROJECT CARDS (1 x 3 grid) ---------- */
       .cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+       display: grid;
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+       gap: 20px;
       }
 
       .card {
@@ -144,8 +145,10 @@
         padding: 14px;
       }
       .card-text h3 {
-        font-size: 16px;
-        margin-bottom: 6px;
+  font-size: 15px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  white-space: nowrap;
       }
       .card-text p {
         font-size: 14px;
