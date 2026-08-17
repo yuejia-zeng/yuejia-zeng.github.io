@@ -110,15 +110,35 @@
 
       /* Empty space for project photo */
       .card-photo {
-        height: 120px;
-        background: #ddd;
-        border-bottom: 1px dashed #aaa;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #888;
-        font-size: 12px;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 14px;
+        overflow: hidden;
       }
+
+      .card-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 20, 40, 0.85),
+    rgba(5, 20, 40, 0.05)
+  );
+}
+
+        .card-photo span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
 
       .card-text {
         padding: 14px;
