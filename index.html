@@ -91,6 +91,16 @@ header p {
   white-space: nowrap;
 }
 
+::selection {
+  color: #1f3040;
+  background: #e8d7a5;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(185, 138, 40, 0.35);
+  outline-offset: 3px;
+}
 
       /* ------- Footer ----- */
       footer {
@@ -140,6 +150,17 @@ header p {
 
   box-shadow: 0 12px 28px rgba(31, 51, 68, 0.2);
   transform: rotate(2deg);
+}  
+
+.photo {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.photo-stage:hover .photo {
+  transform: rotate(0deg) scale(1.04);
+  box-shadow: 0 16px 34px rgba(31, 51, 68, 0.25);
 }
 
         
@@ -298,6 +319,20 @@ header p {
         color: #555;
       }
 
+      .card-photo {
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+.card:hover .card-photo {
+  filter: brightness(1.06) saturate(1.08);
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
       .skills {
   display: flex;
   flex-wrap: wrap;
@@ -402,6 +437,22 @@ header p {
   color: #6a7885;
   font-size: 12px;
 }
+
+.language-list span,
+.highlight {
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.language-list span:hover,
+.highlight:hover {
+  border-color: #c7d4de;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(30, 50, 70, 0.1);
+}
+      
 
 /* ---------- PROFESSIONAL HIGHLIGHTS ---------- */
 .highlights {
