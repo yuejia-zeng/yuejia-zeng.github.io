@@ -6,7 +6,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yuejia Zeng | Data Analytics Portfolio</title>
+    <meta
+  name="description"
+  content="Yuejia Zeng's data and business analytics portfolio, featuring professional experience, education, technical skills, and selected projects."
+/>
 
+<meta name="author" content="Yuejia Zeng" />
+
+<link
+  rel="canonical"
+  href="https://yuejia-zeng.github.io/"
+/>
     <style>
       /* ============================================================
        BASIC STYLES — students can tweak colors/fonts here
@@ -57,7 +67,7 @@
 header {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
+  grid-template-columns: minmax(0, 1fr) 190px;
   align-items: center;
   gap: 34px;
   margin-bottom: 30px;
@@ -117,8 +127,8 @@ button:focus-visible {
 .photo-stage {
   position: relative;
   display: grid;
-  width: 180px;
-  height: 160px;
+  width: 190px;
+  height: 175px;
   place-items: center;
 }
 
@@ -140,8 +150,8 @@ button:focus-visible {
   position: relative;
   z-index: 1;
 
-  width: 112px;
-  height: 112px;
+  width: 132px;
+  height: 132px;
   display: block;
   object-fit: cover;
 
@@ -260,6 +270,8 @@ button:focus-visible {
       }
 
        .card {
+    display: flex;
+  flex-direction: column;
   border: 1px solid #e3e8ec;
   border-radius: 10px;
   overflow: hidden;
@@ -306,6 +318,7 @@ button:focus-visible {
 }
 
       .card-text {
+          flex: 1;
         padding: 14px;
       }
       .card-text h3 {
@@ -714,6 +727,17 @@ button:focus-visible {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.tabs {
+  width: 100%;
+  gap: 6px;
+}
+
+.tab-button {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 8px;
+  font-size: 13px;
+}  
   
 }
 /*  ------------add on ------------*/
@@ -737,15 +761,16 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .tab-content.active,
   .card,
-  .profile-links a {
+  .card-photo,
+  .tab-button,
+  .photo,
+  .profile-links a,
+  .language-list span,
+  .highlight {
     animation: none;
     transition: none;
   }
 }
-
-
-
-
 
 
 
@@ -1108,7 +1133,7 @@ button:focus-visible {
       </div>
       <footer>
         <p>
-          © 2026 Yuejia Zeng ·  All rights reserved.
+          © 2026 Yuejia Zeng · All rights reserved.
         </p>
       </footer>
       
